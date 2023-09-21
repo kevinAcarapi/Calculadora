@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.calculadora {
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4] /* agregue una columna mas */;
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3] 1fr [y4] 1fr [y5];
+    width: 600px;
+    height: auto; /* de 400px a auto, xq si no la altura de calculadora no abarca las demas filas que agregue. */
+    margin: 10px auto;
+    border: 1px solid black;
+}
+.calculadora .pantalla {
+    overflow: hidden;
+    height: 100px;
+    grid-column: x0 / x4 /* modifique para que ocupara todo la columna (se puede ver como fila)  */;
+    grid-row: y0 / y1;
+    border: 1px solid black;
+    font-size: 80px;
+}
+.calculadora button {
+    font-size: 80px;
+    border: 1px solid black;
+}
+.calculadora button:hover {
+    background: lightgreen;
+}
+
+.calculadora [name="igual"] {
+    grid-column: x0 / x4;
+}
+
+#body{
+    color: red;
+}
